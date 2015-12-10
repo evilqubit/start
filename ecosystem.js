@@ -1,0 +1,18 @@
+{
+    apps: [
+        {
+            name: "start",
+            script: "bin/www",
+        }
+    ],
+    deploy: {
+        stagging: {
+            user: "user",
+            host: "something.com",
+            ref: "origin/master",
+            repo: "git@github.com:someCompany/something.git",
+            path: "~/www/stagging",
+            "post-deploy": "npm run deploy; export NODE_PORT=8000; pm2 startOrRestart ecosystem.json"
+        }
+    }
+}
