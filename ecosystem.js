@@ -7,12 +7,12 @@
     ],
     deploy: {
         stagging: {
-            user: "catchcam",
-            host: "162.243.187.148",
+            user: "pi",
+            host: "pilabs.local",
             ref: "origin/master",
             repo: "https://github.com/evilqubit/start.git",
             path: "~/www/stagging",
-            "post-deploy": "npm run deploy; export NODE_PORT=8000; pm2 startOrRestart ecosystem.json"
+            "post-deploy": "npm run deploy; export NODE_PORT=3000; pm2 startOrRestart ecosystem.json"
         }
     }
 }
