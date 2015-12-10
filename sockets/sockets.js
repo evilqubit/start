@@ -17,11 +17,11 @@ module.exports = function () {
                if (data.indexOf('direction') >= 0) {
                     var dir = data.split(':')[1];
                     console.log(dir);
-               io.on('connection', function(socket){
+               //io.on('connection', function(socket){
              //  socket.on('chat message', function(msg){
                io.emit('chat message', dir);
               //});
-      });
+     // });
 
                }
             }
