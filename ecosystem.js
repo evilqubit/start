@@ -7,10 +7,10 @@
     ],
     deploy: {
         stagging: {
-            user: "user",
-            host: "something.com",
+            user: "catchcam",
+            host: "162.243.187.148",
             ref: "origin/master",
-            repo: "git@github.com:someCompany/something.git",
+            repo: "https://github.com/evilqubit/start.git",
             path: "~/www/stagging",
             "post-deploy": "npm run deploy; export NODE_PORT=8000; pm2 startOrRestart ecosystem.json"
         }
