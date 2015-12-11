@@ -51,10 +51,15 @@ if (navigator.onLine && window.location.hostname === 'patorjk.com') {
     </div>
     <script type="text/javascript" src="./js/snake.js"></script>
     <script type="text/javascript">
-    var mySnakeBoard = new SNAKE.Board(  {
+   var  mySnakeBoard = new SNAKE.Board(  {
                                             boardContainer: "game-area",
                                             fullScreen: true
-                                        });    
+    
+                                            });
+socket.on('chat message', function(msg){
+                    SNAKE.handleArrowKeys(65);
+                     alert(msg);
+                  });
     </script>
 </body>
 </html>
