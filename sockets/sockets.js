@@ -3,7 +3,7 @@ var server = require('../bin/www');
 var io = require('socket.io')(server);
 var serialport = require("serialport");
 var SerialPort = require("serialport").SerialPort;
-    serialPort = new  SerialPort("/dev/tty.usbmodem1431", {
+    serialPort = new  SerialPort("/dev/ttyACM0", {
             baudrate: 9600,
             parser: serialport.parsers.readline("\n")
         });
