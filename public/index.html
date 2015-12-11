@@ -55,11 +55,6 @@ if (navigator.onLine && window.location.hostname === 'patorjk.com') {
                                             boardContainer: "game-area",
                                             fullScreen: true
                                             });
-var socket = io();                                       
-socket.on('chat message', function(msg){
-                    SNAKE.moveQueue.unshift(3);
-                     alert(msg);
-                  });
-    </script>
+</script>
 </body>
 </html>
