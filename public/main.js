@@ -102,7 +102,7 @@ cycle = {
         break;
       case 'left':
         cycle.x -= cycle.width;
-        break;i
+        break;
     });
     }
     if (this.checkCollision(cycle, opponent)) {
