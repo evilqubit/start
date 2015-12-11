@@ -922,7 +922,7 @@ SNAKE.Board = SNAKE.Board || (function() {
                     
                     mySnake.rebirth();
                     socket.on('chat message', function(msg){
-                                 // console.log(msg);
+                                  console.log(msg);
                       if(msg=="left"){            
                     mySnake.handleArrowKeys(3);}});
                     me.setBoardState(2); // start the game!
