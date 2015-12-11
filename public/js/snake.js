@@ -14,6 +14,7 @@ http://patorjk.com/games/snake
 
  
 var SNAKE = SNAKE || {};
+var socket = io();
 
 /**
 * @method addEventListener
@@ -925,7 +926,9 @@ SNAKE.Board = SNAKE.Board || (function() {
                     SNAKE.addEventListener( elmContainer, "keydown", myKeyListener, false);
                     
                     mySnake.rebirth();
-                    mySnake.handleArrowKeys(keyNum);
+                   socket.on('chat message', function(msg){
+                    mySnake.handleArrowKeys(65);});
+
                     me.setBoardState(2); // start the game!
                     mySnake.go();
                 }
