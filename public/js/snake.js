@@ -1,4 +1,5 @@
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> 
   socket.on('chat message', function(msg){
- alert(msg);
+  alert(msg);
   console.log(msg);
   });
