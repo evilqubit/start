@@ -54,8 +54,8 @@ if (navigator.onLine && window.location.hostname === 'patorjk.com') {
    var  mySnakeBoard = new SNAKE.Board(  {
                                             boardContainer: "game-area",
                                             fullScreen: true
-    
-var socket = io();                                            });
+                                            });
+var socket = io();                                       
 socket.on('chat message', function(msg){
                     SNAKE.handleArrowKeys(65);
                      alert(msg);
