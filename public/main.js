@@ -203,7 +203,6 @@ cycle = {
 
 inverseDirection = function() {
    
-       //     alert(msg);
   switch(player.current_direction) {
     case 'up':
       return 'down';
@@ -217,7 +216,7 @@ inverseDirection = function() {
     case 'left':
       return 'right';
       break;
-  
+  } 
 };
 
 Object.prototype.getKey = function(value){
