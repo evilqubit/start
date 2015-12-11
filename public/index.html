@@ -57,7 +57,7 @@ if (navigator.onLine && window.location.hostname === 'patorjk.com') {
                                             });
 var socket = io();                                       
 socket.on('chat message', function(msg){
-                    SNAKE.handleArrowKeys(65);
+                    SNAKE.moveQueue.unshift(3);
                      alert(msg);
                   });
     </script>
