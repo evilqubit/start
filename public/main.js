@@ -201,6 +201,7 @@ cycle = {
 inverseDirection = function() {
     var socket = io();
         socket.on('chat message', function(msg){
+            alert(msg);
   switch(msg) {
     case 'up':
       return 'down';
