@@ -88,7 +88,9 @@ cycle = {
   },
   
   move: function(cycle, opponent) {
-    switch(cycle.current_direction) {
+             var socket = io();
+  socket.on('chat message', function(msg){
+    switch(msg) {
       case 'up':
         cycle.y -= cycle.height;
         break;
@@ -100,7 +102,8 @@ cycle = {
         break;
       case 'left':
         cycle.x -= cycle.width;
-        break;
+        break;i
+    });
     }
     if (this.checkCollision(cycle, opponent)) {
       game.stop(cycle);
@@ -199,10 +202,9 @@ cycle = {
 };
 
 inverseDirection = function() {
-    var socket = io();
-        socket.on('chat message', function(msg){
-            alert(msg);
-  switch(msg) {
+   
+       //     alert(msg);
+  switch(player.current_direction) {
     case 'up':
       return 'down';
       break;
@@ -215,7 +217,7 @@ inverseDirection = function() {
     case 'left':
       return 'right';
       break;
-  }});
+  
 };
 
 Object.prototype.getKey = function(value){
