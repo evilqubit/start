@@ -8,7 +8,8 @@ http://patorjk.com/games/snake
 * @module Snake
 * @class SNAKE
 */
-
+ socket.on('chat message', function(msg){
+                                      console.log(msg); });
 var SNAKE = SNAKE || {};
 
 /**
