@@ -104,7 +104,7 @@ cycle = {
         cycle.x -= cycle.width;
         break;
     }});
-    }
+    },
     if (this.checkCollision(cycle, opponent)) {
       game.stop(cycle);
     }
